@@ -1,0 +1,10 @@
+html, body {
+    height: 100%;
+    margin: 0;
+  }
+  .theme-dark {
+    @import "src/assets/theme/dark/styls";
+}
+.theme-light {
+    @import "src/assets/theme/light/styls";
+}

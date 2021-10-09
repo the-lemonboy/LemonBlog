@@ -1,0 +1,99 @@
+.el-header {
+    background-color: rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
+    box-shadow: 0 10px 20px #250707;
+  }
+  .el-footer {
+    background-color: rgb(38, 38, 38);
+    color: rgb(38, 38, 38);
+    height: 200px !important;
+  }
+  .el-main {
+    min-height: 100vh;
+   color:rgb(241,241,241);
+    background-color: #f1f1f1;
+    @media(max-width:700px){
+      height: 100%;
+    }
+  }
+span{
+  color: black;
+}
+  // content
+  .content-box{
+    background-color: white;
+  }
+  .content-mobileBox{
+    background-color: white;
+  }
+  .content-info{
+    .title{
+      color: black;
+    }
+    .post_time{
+      color: black;
+    }
+    .detail{
+      background: rgb(34, 34, 34);
+    }
+    .content{
+      color: black;
+    }
+    p{
+      color: white;
+    }
+  }
+
+  // resumeCart
+  .contentCart-pcBox{
+    background-color: white;
+  }
+
+  // l-footer
+  .lfooter-container{
+    .homeTitle{
+      color: white;
+    }
+  }
+
+  // navigation
+  .navigation-box{
+    #mobileNav{
+      background-color: #ffffff;
+    }
+  }
+
+  // login
+  .login-form_wrap{
+         .login{
+          background: rgb(241,241,241);
+         }
+         .el-button{
+          background: #409EFF;
+         }
+  }
+
+  // detailArticle
+  .detailBox-pc{
+    background-color:white;
+    .title{
+      color:black;
+    }
+    .postTime{
+      color: black;
+    }
+    .content{
+      color: black;
+    }
+  }
+  .menuBox-pc{
+    background-color: white;
+  }
+
+  // writerArticle
+  .writerContainer{
+    .submit{
+      background-color: rgb(38, 38, 38);
+      color: white;
+    }
+  }
