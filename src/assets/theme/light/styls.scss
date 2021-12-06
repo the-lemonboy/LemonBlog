@@ -38,15 +38,16 @@ span{
     }
     .content{
       color: black;
-    }
-    p{
-      color: white;
+      
     }
   }
 
   // resumeCart
-  .contentCart-pcBox{
+  .contentCartBox-pc{
     background-color: white;
+    p{
+      color: #250707;
+    }
   }
 
   // l-footer
@@ -75,6 +76,18 @@ span{
 
   // detailArticle
   .detailBox-pc{
+    background-color:white;
+    .title{
+      color:black;
+    }
+    .postTime{
+      color: black;
+    }
+    .content{
+      color: black;
+    }
+  }
+  .detailBox-mobile{
     background-color:white;
     .title{
       color:black;

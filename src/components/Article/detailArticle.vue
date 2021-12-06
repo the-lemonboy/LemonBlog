@@ -1,14 +1,14 @@
 <template>
   <div>
-    <main>
-      <div v-bind:class="{'detailBox-pc':pc, 'detailBox-mobile':mobile}">
+     <div class="DA-content-box">
+        <div v-bind:class="{'detailBox-pc':pc, 'detailBox-mobile':mobile}">
         <div class="title">{{ title }}</div>
         <div class="postTime">{{ postTime }}</div>
-        <div class="content" v-html="content"></div>
+        <div class="content" v-html="content" ref="refImg"></div>
+      </div>
       </div>
       <!-- 目录 -->
-      <div v-bind:class="{'menuBox-pc':pc, 'menuBox-mobile':mobile}"></div>
-    </main>
+      <!-- <div v-bind:class="{'menuBox-pc':pc, 'menuBox-mobile':mobile}"></div> -->
   </div>
 </template>
 
@@ -47,30 +47,30 @@ export default {
         window.addEventListener("resize", this.checkScreen);
        this.checkScreen();
   },
-  updated() {
+updated() {
     const content = document.querySelector('.content')
     let imgs = content.querySelectorAll('img')
     for(let i=0; i<imgs.length; i++){
       imgs[i].style.width = "100%"
       imgs[i].style.display = "block"
-      imgs[i].style.position = "absolute"
-      imgs[i].style.left ="50%"
-      imgs[i].style.transform = "translateX(-50%)"
+      imgs[i].style.padding = "20px"
     }
  },
 };
 </script>
 
 <style lang="scss"  scoped>
+.DA-content-box{
+  display:flex;
+   justify-content: center;
+}
 // pc
 .detailBox-pc {
   width: 800px;
-  padding: 20px;
-  min-height: 100vh;
-  margin: 50px 50px 20px 150px;
+  padding: 30px;
+  min-height: 300px;
   border-radius: 8px;
   box-sizing: border-box;
-  position: relative;
   .title {
     font-size: 2em;
     font-weight: 7000;
@@ -83,23 +83,26 @@ export default {
     margin-top: 10px;
     padding: 10px;
   }
+ 
 }
 .detailBox-mobile{
-  width: 90%;
-}
-.menuBox-pc {
-  position: absolute;
-  top: 110px;
-  right: 150px;
-  width: 300px;
-  height: 400px;
-  border-radius: 30px;
+ width: 800px;
+  padding: 30px;
+  min-height: 300px;
+  border-radius: 8px;
+  box-sizing: border-box;
+   .title {
+    font-size: 2em;
+    font-weight: 7000;
+    margin-top: 20px;
+    text-align: center;
+  }
+  .postTime {
+    text-align: center;
+    font-weight: 500;
+    margin-top: 10px;
+    padding: 10px;
+  }
 }
 
-// .menuBox-mobile{
-//   display: none;
-// }
-img{
-  width: 100%;
-}
 </style>

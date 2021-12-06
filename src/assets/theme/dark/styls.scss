@@ -1,49 +1,48 @@
 .el-header {
+  background-color: #2d2424;
+  color: #2d2424;
+}
+.el-footer {
+  background-color: #2d2424;
+  color: #2d2424;
+  height: 200px !important;
+}
+.el-main {
+  min-height: 100vh;
+  // color: rgb(0, 0, 0);
+  background-color: #292222;
+  @media (max-width: 700px) {
+    height: 100%;
+  }
+}
+span {
+  color: rgb(238, 227, 227);
+}
+// content
+.blog_cards {
+  .content-box {
     background-color: #2d2424;
-    color: #2d2424;
   }
-  .el-footer {
+  .content-mobileBox {
     background-color: #2d2424;
-    color: #2d2424;
-    height: 200px !important;
   }
-  .el-main {
-    min-height: 100vh;
-    color: rgb(0, 0, 0);
-    background-color: #292222;
-    @media (max-width: 700px) {
-      height: 100%;
-    }
-  }
-  span {
+
+  .title {
     color: rgb(238, 227, 227);
   }
-  // content
-  .blog_cards{
-    .content-box {
-      background-color: #2d2424;
-    }
-    .content-mobileBox {
-      background-color: #2d2424;
-    }
-   
-    .title {
-      color: rgb(238, 227, 227);
-    }
-    .post_time {
-      color: rgb(238, 227, 227);
-    }
-    .detail {
-      background: rgb(238, 227, 227);
-    }
-    .content {
-      color: rgb(238, 227, 227);
-    }
+  .post_time {
+    color: rgb(238, 227, 227);
   }
-  // resumeCart
-  .contentCart-pcBox {
-    background-color: #2d2424;
+  .detail {
+    background: rgb(238, 227, 227);
   }
+  .content {
+    color: rgb(238, 227, 227);
+  }
+}
+// resumeCart
+.contentCart-pcBox {
+  background-color: #2d2424;
 
   h2 {
     color: #2d2424;
@@ -51,49 +50,73 @@
   p {
     color: #2d2424;
   }
-  // navigation
-  .navigation-box {
-    #mobileNav {
-      background-color: #2d2424;
-    }
+}
+// navigation
+.navigation-box {
+  #mobileNav {
+    background-color: #524444;
   }
+  p {
+    color: rgb(226, 215, 215);
+  }
+}
 
-  // login
+// login
+.loginBox {
+  background-color: #2d2424;
+  width: 100vw;
+  height: 100vh;
   .login-form_wrap {
     .login {
-      background: #2d2424;
+      background: #1d1919;
     }
     .el-button {
-      background: #409EFF;
+      background: #409eff;
+    }
+    p {
+      color: rgb(219, 206, 206);
     }
   }
+}
 
-  // footer
-  .homeTitle{
+// footer
+.homeTitle {
+  color: rgb(238, 227, 227);
+}
+
+// detailArticle
+.detailBox-pc {
+  background-color: #2d2424;
+  .title {
     color: rgb(238, 227, 227);
   }
+  .postTime {
+    color: rgb(238, 227, 227);
+  }
+  .content {
+    color: rgb(255, 255, 255);
+  }
+}
+.detailBox-mobile{
+  background-color: #2d2424;
+  .title {
+    color: rgb(238, 227, 227);
+  }
+  .postTime {
+    color: rgb(238, 227, 227);
+  }
+  .content {
+    color: rgb(255, 255, 255);
+  }
+}
+.menuBox-pc {
+  background-color: #2d2424;
+}
 
-  // detailArticle
-  .detailBox-pc{
-    background-color: #2d2424;
-    .title{
-      color:rgb(238, 227, 227);
-    }
-    .postTime{
-      color: rgb(238, 227, 227);
-    }
-    .content{
-      color: rgb(238, 227, 227);
-    }
+// writerArticle
+.writerContainer {
+  .submit {
+    background-color: rgb(238, 227, 227);
+    color: black;
   }
-  .menuBox-pc{
-    background-color: #2d2424;;
-  }
-
-  // writerArticle
-  .writerContainer{
-    .submit{
-      background-color: rgb(238, 227, 227);
-      color: black;
-    }
-  }
+}

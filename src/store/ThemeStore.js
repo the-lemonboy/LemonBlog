@@ -2,7 +2,7 @@ export default {
     namespaced: true,
     state: {
       persistData: {
-        theme: null
+        theme: null,
       }
     },
     getters: {

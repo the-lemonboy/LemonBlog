@@ -13,7 +13,6 @@
     </el-container>
   </div>
 </template>
-
 <script>
 import navigation from "../components/navigation.vue";
 import detail_article from "../components/Article/detailArticle.vue";
@@ -32,5 +31,9 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-
+el-main{
+  position: relative;
+  min-height: 100%;
+  height: auto;
+}
 </style>

@@ -7,9 +7,9 @@ const api = axios.create({
 // 请求拦截
 api.interceptors.request.use(
     function(config) {
-        console.group('全局请求拦截')
-        console.log(config)
-        console.groupEnd()
+        // console.group('全局请求拦截')
+        // console.log(config)
+        // console.groupEnd()
         return config;
     },
     function(err) {
@@ -20,9 +20,9 @@ api.interceptors.request.use(
 //响应拦截
 api.interceptors.response.use(
     function(response){
-        console.group('全局响应拦截')
-        console.log(response)
-        console.groupEnd()
+        // console.group('全局响应拦截')
+        // console.log(response)
+        // console.groupEnd()
         return response;
     },
     function(err) {

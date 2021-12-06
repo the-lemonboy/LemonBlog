@@ -7,9 +7,7 @@ const $themeList = [
   {
     id: 'theme-light',
     state: false
-  },
-  
- 
+  }, 
 ]
 export default {
   name: 'SimplePlugin',
@@ -21,6 +19,7 @@ export default {
       })
       body.classList.add(theme.id)
       store.dispatch('Theme/changeTheme', theme)
+      
     }
     Vue.prototype.$themeList = $themeList
     Vue.directive('ExternalLink', (el, binding) => {

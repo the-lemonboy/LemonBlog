@@ -1,18 +1,17 @@
 <template>
  <div class="dark-lightBox">
  <div class="xx" @click="change_switch()">
-        <div class="iconBox" v-if="this.currentTheme.state"  v-bind="$changeTheme($themeList[this.stateNum])" >
+        <div class="iconBox" v-if="this.currentTheme.state"  v-bind="$changeTheme($themeList[0])" >
           <svg class="icon-dark-light" aria-hidden="true" >
   <use xlink:href="#icon-yueliang" ></use>
 </svg>
         </div>
-        <div class="iconBox" v-else  v-bind="$changeTheme($themeList[this.stateNum])">
+        <div class="iconBox" v-else  v-bind="$changeTheme($themeList[1])">
           <svg class="icon-dark-light" aria-hidden="true">
   <use xlink:href="#icon-taiyang"></use>
 </svg>
         </div>
  </div>
-  <!-- <button :key="theme.id" v-for="theme in $themeList" @click="$changeTheme(theme)">{{theme.name}}</button> -->
  </div>
 </template>
 
@@ -21,7 +20,7 @@ import { mapGetters } from 'vuex'
 export default {
 data(){
   return{
-    stateNum : '' 
+    stateNum : '' ,
   }
 },
   computed: {
@@ -29,20 +28,9 @@ data(){
   },
   methods:{
     change_switch(){
-      if(this.currentTheme.state == false){
-        this.currentTheme.state = true
-         this.stateNum=1
-      }else{
-       this.currentTheme.state = false
-       this.stateNum=0
-      }
-    }
+     this.currentTheme.state=!this.currentTheme.state
+    },
   },
-  created(){
-   console.log(this.currentTheme.id)
-   console.log(this.currentTheme.state)
-
-  }
 }
 </script>
 

@@ -11,8 +11,6 @@
           placeholder="标题..."
           v-model="title"
         />
-        <!-- <input class="cover_photo" type="file" @change="uploadFile" > -->
-        <!-- <button @click="onUpload">上传照片</button> -->
         <div class="mavonEditor">
           <no-ssr>
             <mavon-editor
@@ -100,13 +98,6 @@ export default {
     getmd(value, render) {
       this.render = render;
     },
-    //  onFileSelected(event){
-    //     this.selectedFile = event.target.files[0]
-    //     console.log(this.selectedFile)
-    //   },
-    //    uploadFile (event) {
-    //         this.files = event.target.files
-    //         },
     senddata($e) {
       let date, y, m, d, h, mm;
       date = new Date();
@@ -116,12 +107,6 @@ export default {
       h = date.getHours();
       mm = date.getMinutes();
       this.postTime = y + "-" + m + "-" + d + "-" + h + "-" + mm;
-
-      //上传图片
-      // const formData = new FormData();
-      // for (const i of Object.keys(this.files)) {
-      //   formData.append('files', this.files[i])
-      // }
       var formdata = new FormData();
       for (var _img in this.img_file) {
         formdata.append('_img', this.img_file[_img]);
@@ -140,15 +125,6 @@ export default {
           console.log(err)
           this.$message.error("发布异常！")
         });
-      // post("api/file-upload", formdata)
-      //   .then((res) => {
-      //     console.log(res);
-      //     // for (var img in res) {
-      //     //   // $vm.$img2Url 详情见本页末尾
-      //     //   $vm.$img2Url(img[0], img[1]);
-      //     // }
-      //   })
-      //   .catch((err) => console.log(err));
     },
   },
 };
@@ -166,8 +142,6 @@ export default {
   }
 }
 .cover_photo {
-  //background-color:rgb(38,38,38) ;
-  // color:white;
   font-weight: 300px;
   width: 300px;
   height: 35px;

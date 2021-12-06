@@ -13,7 +13,7 @@ export default new Vuex.Store({
   actions: {
   },
   modules: {
-    Theme: ThemeStore
+    Theme: ThemeStore,
   },
   plugins: [createPersistedState({
     paths: PERSIST_PATHS

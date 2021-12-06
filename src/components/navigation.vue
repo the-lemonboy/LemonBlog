@@ -1,6 +1,6 @@
 <template>
    <div class="navigation-box">
-       <router-link v-bind:class="{'homeLink-pc':pc, 'homeLink-mobile':mobile}" to="/"><span>LemonBlog</span></router-link>
+       <router-link v-bind:class="{'homeLink-pc':pc, 'homeLink-mobile':mobile}" to="/"><span class="title-info">LemonBlog</span></router-link>
        <dark_light />
     <div id="mainNav"  v-show="pc">
       <ul>
@@ -67,6 +67,7 @@ export default {
 .navigation-box{
     height: 300px;
     .homeLink-pc{
+        cursor: pointer;
      span{
          font-size: 1.5rem;
       font-weight:bold;
@@ -75,15 +76,18 @@ export default {
       display: inline-block;
      text-decoration: none;
      }
+     .title-info{
+        display: inline-block;
+     }
     }
       .homeLink-mobile{
       display: none;
   }
     #mainNav{
-        display: flex;
-        justify-content: flex-end;
-        position: relative;
-        top:-35px;
+        position: absolute;
+        right:20px;
+        top:10px;
+        display: inline-block;
       .link{
           text-decoration: none;
           margin-right:32px ;
@@ -91,7 +95,6 @@ export default {
           font-size:1.3em;
       }
     }
-
     // 移动端
     .mobileMulu{
         margin-right:10px ;
@@ -139,5 +142,4 @@ export default {
     transform: translateX(-200px);
 }
   }
-
 </style> 

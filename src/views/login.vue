@@ -62,18 +62,7 @@ this.$router.push('/editorArticle')
     })
   })
     }
-   
 },
-mounted(){
-  if( window.sessionStorage.setItem('token',  res.data.token)){
-    this.$router.push('/editorArticle');
-  }else{
-    this.$router.push('/login');
-  }
-  
-}
-
-
 }
 </script>
 
@@ -105,7 +94,7 @@ mounted(){
     transform: translate(-50%,-50%);
     .input{
       width: 250px;
-
+      margin:20px;
     }
     }
     .el-button{

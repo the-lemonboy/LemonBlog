@@ -1,3 +1,0 @@
-let changeTheme = function(){
-    
-}
